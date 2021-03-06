@@ -1,0 +1,37 @@
+/**index.wxss**/
+/* 1.局部样式 */
+
+/* 2.小程序封装了自己的样式单位rpx */
+
+/* 3.小程序支持的选择器
+实际上我们常用的也就是class和id了
+
+选择器	样例	样例描述
+.class	.simple	选择所有拥有 class="sample"的组件
+#id	#simple	选择所有拥有 id ="sample"的组件
+element	view	选择所有view 组件
+Element，element	view，checkbox	选择所有文档的view组件和所有的checkbox组件
+::after	view::after	在 view 组件后边 插入内容
+::before	view::before	在 view 组件前边插入内容 */
+
+
+
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}
+
+.usermotto {
+  margin-top: 200px;
+}

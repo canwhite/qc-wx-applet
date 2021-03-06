@@ -1,0 +1,33 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="userinfo">
+    <!-- 
+    -----------------------区别于vue属性插值的方法:
+    1.属性插值
+    的双引号之内有乾坤，这边相当于双括号之内有乾坤
+    --------------------------
+    2.模板插值
+    一般的插值是和vue一样的操作
+    -->
+    <!--这里有一个条件判断语句wx:if -->
+    
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称
+    </button>
+
+    <block wx:else>
+      <!-- 事件绑定一般都是bind开头 -->
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class="usermotto">
+    <view style="text-align:center">{{motto}} </view>
+    <!-- 在这里加个button转化一下motto -->
+    <button bindtap="clickMe"> 点我置换 </button>
+
+    <button bindtap="goto"> 前往test</button>
+    
+    <button bindtap="goSub"> 前往sub </button>
+
+  </view>
+</view>

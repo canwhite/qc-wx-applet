@@ -1,0 +1,56 @@
+<!--pages/test.wxml-->
+<text>pages/test.wxml</text>
+<view class="bg">
+  <text>{{msg}}</text>
+</view>
+
+<view>bind</view>
+<button  bindtap="goback" >goback</button>
+
+
+<view>------capture-catch 和capture-bind------</view>
+
+
+<view
+  style="background:green"
+  id="outer"
+  bind:touchstart="handleTap1"
+  capture-bind:touchstart="handleTap2"
+>
+  outer view
+  <view
+    id="inner"
+    bind:touchstart="handleTap3"
+    capture-catch:touchstart="handleTap4"
+  >
+    inner view
+  </view>
+</view>
+
+<view> PS:注意先走capture,然后走普通bind,注意capture-bind和capture-catch的区别,captute-catch阻断冒泡,相当于
+放在哪,截断在哪!
+</view>
+
+<view> ------数据请求的结果的显示------ </view>
+<view style="background:green" > {{city}} </view>
+
+
+<view>------小程序里边的动态样式--------</view>
+<view> 
+这里大致写一下动态引入class样式吧，注意小程序是双括号里边有乾坤
+</view>
+<!-- style和这个类似 -->
+<view class="{{select==1?'active':'unactive'}}">
+  我是内容
+</view>
+
+
+
+
+
+
+
+
+
+
+

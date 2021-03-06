@@ -1,0 +1,10 @@
+/* pages/test.wxss */
+.bg{
+  background:green;
+}
+.active{
+  background: red;
+}
+.unactive{
+  background: green;
+}

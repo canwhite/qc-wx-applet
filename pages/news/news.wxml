@@ -1,0 +1,10 @@
+<!--pages/news/news.wxml-->
+<view class="center">------常用样式的测试-------</view>
+
+<view>wxs的使用</view>
+<wxs src="../../wxs/string.wxs" module="tools" />
+<view>
+  {{tools.my_slice("123456789",0,5)}}
+</view>
+
+<van-button type="default" bindtap="click">默认按钮</van-button>
